@@ -194,10 +194,22 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 function removeItem(arr, item) {
-  if (arr.includes(item)) {
+  if (!item && !arr) {
+    return [];
+  } else if (arr.includes(item)) {
     arr.splice(arr.indexOf(item), 1);
   }
   return arr;
+}
+
+
+function addItem(arr, item) {
+  if (!item && !arr) {
+    return [];
+  } else {
+    arr.push(item);
+    return arr;
+  }
 }
 
 
@@ -210,6 +222,13 @@ function removeItem(arr, item) {
 
 //Code Here
 
+function maker() {
+  var arr = [];
+  for (let i = 1; i <= 215; i++) {
+    arr.push(i);
+  };
+  return arr;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -258,7 +277,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  return (arr1.length > arr2.length) ? arr1 : arr2;
+}
 
 
 /*
@@ -270,7 +291,15 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2) {
+  var newArr = [];
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      newArr.push(arr1[i]);
+    };
+  };
+  return newArr;
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -310,6 +339,8 @@ var colt = {
 */
 
 //Code Here
+var devMountainEmployees = [tyler, cahlan, ryan, colt];
+console.log(devMountainEmployees.length);
 
 
 
@@ -319,6 +350,11 @@ var colt = {
 */
 
 //Code Here
+for (let i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i].name === 'Cahlan') {
+    devMountainEmployees.splice(i, 1);
+  }
+};
 
 
 
@@ -331,6 +367,8 @@ var colt = {
 */
 
 //Code Here
+var users = [];
+
 
 
 
@@ -351,6 +389,22 @@ var user1 = {
 
 //Code Here
 
+var user2 = {
+  name: 'Tylerr McGinnis',
+  email: 'tylermcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+
+var user3 = {
+  name: 'Tylerrr McGinnis',
+  email: 'tylermcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+
+var users = [user1, user2, user3];
+
 
 
 /*
@@ -364,6 +418,11 @@ var user1 = {
 */
 
 //Code Here
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === 'tylermcginnis33@gmail.com') {
+    users.splice(i, 1);
+  }
+};
 
 
 
