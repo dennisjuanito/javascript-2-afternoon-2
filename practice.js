@@ -196,7 +196,6 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 function removeItem(arr, item) {
   console.log(arr);
   if (!item || !arr) {
-    
     return [];
   } else if (arr.includes(item)) {
     arr.splice(arr.indexOf(item), 1);
