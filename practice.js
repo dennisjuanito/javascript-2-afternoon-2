@@ -101,12 +101,6 @@ function evenFinder(arr) {
   return newArr;
 }
 
-
-
-
-
-
-
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -128,7 +122,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+function divider(arr) {
+  var evensArray = [];
+  var oddsArray  = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evensArray.push(arr[i]);
+    } else {
+      oddsArray.push(arr[i]);
+    };
+  }
+  return [evensArray, oddsArray];
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -149,6 +154,16 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr) {
+  var number = getRandomArbitrary();
+  if (arr.includes(number)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
 
 
 
@@ -178,6 +193,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(arr, item) {
+  if (arr.includes(item)) {
+    arr.splice(arr.indexOf(item), 1);
+  }
+  return arr;
+}
 
 
 
@@ -204,6 +225,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(arr) {
+  var newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    var integerNum = parseInt(arr[i]);
+    newArr.push(integerNum + 10);
+  };
+  return newArr;
+}
 
 
 
