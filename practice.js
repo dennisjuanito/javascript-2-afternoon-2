@@ -194,7 +194,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 function removeItem(arr, item) {
-  if (!item && !arr) {
+  console.log(arr);
+  if (!item || !arr) {
+    
     return [];
   } else if (arr.includes(item)) {
     arr.splice(arr.indexOf(item), 1);
@@ -204,7 +206,7 @@ function removeItem(arr, item) {
 
 
 function addItem(arr, item) {
-  if (!item && !arr) {
+  if (!item || !arr) {
     return [];
   } else {
     arr.push(item);
