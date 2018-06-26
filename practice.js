@@ -203,6 +203,7 @@ function removeItem(arr, item) {
   return arr;
 }
 
+console.log(2)
 
 function addItem(arr, item) {
   if (!item || !arr) {
